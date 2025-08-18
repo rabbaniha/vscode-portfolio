@@ -14,13 +14,15 @@ export default function LocaleSwitcher() {
   const locales = [
     { code: "en", name: t("en") }, // نام زبان‌ها از فایل‌های ترجمه
     { code: "fa", name: t("fa") },
-    // سایر زبان‌ها
+    { code: "ar", name: t("ar") },
   ];
 
   const changeLocale = (newLocale: string) => {
+    // حذف زبان فعلی از pathname
+    const cleanPathname = pathname.replace(/^\/(en|fa|ar)/, "");
     startTransition(() => {
-      // جایگزینی زبان در URL
-      router.replace(`/${newLocale}${pathname}`);
+      // اضافه کردن زبان جدید به مسیر
+      router.replace(`/${newLocale}${cleanPathname}`);
     });
   };
 
