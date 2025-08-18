@@ -1,4 +1,9 @@
 {
+  "LocaleSwitcher": {
+    "en": "انگلیسی",
+    "fa": "فارسی",
+    "ar": "عربی"
+  },
   "common": {
     "loading": "در حال بارگذاری...",
     "error": "خطای سیستم",
@@ -158,6 +163,11 @@
     "process": {
       "title": "فرآیند کاری من",
       "steps": {
+        "LocaleSwitcher": {
+          "en": "انگلیسی",
+          "fa": "فارسی",
+          "ar": "عربی"
+        },
         "consultation": {
           "title": "مشاوره",
           "description": "درک نیازها و تعریف اهداف پروژه"

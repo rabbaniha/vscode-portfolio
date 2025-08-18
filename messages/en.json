@@ -1,4 +1,9 @@
 {
+  "LocaleSwitcher": {
+    "en": "English",
+    "fa": "Persian",
+    "ar": "Arabic"
+  },
   "common": {
     "loading": "Loading...",
     "error": "System error",
