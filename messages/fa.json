@@ -22,12 +22,10 @@
     "showLess": "کمتر نمایش دهید"
   },
   "navigation": {
-    "home": "خانه",
+    "name": "حیدر ربانیها",
+    "home": "سلام",
     "about": "درباره من",
-    "portfolio": "نمونه کارها",
-    "services": "خدمات",
-    "resume": "رزومه",
-    "blog": "بلاگ",
+    "project": "نمونه کارها",
     "contact": "تماس",
     "switchTheme": "تغییر تم",
     "switchLanguage": "تغییر زبان"
@@ -35,13 +33,14 @@
   "home": {
     "hero": {
       "greeting": "سلام، من",
-      "name": "علی احمدی",
+      "name": "حیدر ربانیها",
       "title": "توسعه‌دهنده Full Stack",
       "subtitle": "متخصص در React، Node.js و طراحی UI/UX",
       "description": "با بیش از 5 سال تجربه در توسعه وب، پروژه‌های مدرن و کارآمد ایجاد می‌کنم",
       "cta": {
-        "portfolio": "مشاهده نمونه کارها",
-        "contact": "تماس با من"
+        "title": "پروفایل من در Github:",
+        "sub-title": "const gitHubLink = ",
+        "link": "https://github.com/rabbaniha"
       }
     },
     "about": {
@@ -247,8 +246,17 @@
     "backToHome": "بازگشت به صفحه اصلی"
   },
   "metadata": {
-    "title": "علی احمدی - توسعه‌دهنده Full Stack",
+    "title": "حیدر ربانیها - توسعه‌دهنده Full Stack",
     "description": "توسعه‌دهنده وب حرفه‌ای با تخصص در React، Node.js و طراحی UI/UX. نمونه کارها و خدمات توسعه وب مدرن.",
     "keywords": "توسعه وب، برنامه نویس، React، Node.js، طراحی وب، UI UX، فریلنسر"
+  },
+  "footer": {
+    "title": "مرا دنبال کنید: ",
+    "linkedin": "",
+    "linkedin-link": "",
+    "instagram": "",
+    "instagram-link": "",
+    "github": "",
+    "github-link": ""
   }
 }

@@ -22,26 +22,25 @@
     "showLess": "Show less"
   },
   "navigation": {
-    "home": "Home",
-    "about": "About Me",
-    "portfolio": "Portfolio",
-    "services": "Services",
-    "resume": "Resume",
-    "blog": "Blog",
-    "contact": "Contact",
+    "name": "heydar-rabbaniha",
+    "home": "_hello",
+    "about": "_about-me",
+    "project": "_project",
+    "contact": "_contact",
     "switchTheme": "Switch Theme",
     "switchLanguage": "Switch Language"
   },
   "home": {
     "hero": {
       "greeting": "Hello, I'm",
-      "name": "Ali Ahmadi",
+      "name": "Heydar Rabbaniha",
       "title": "Full Stack Developer",
-      "subtitle": "Specialized in React, Node.js, and UI/UX design",
-      "description": "With over 5 years of experience in web development, I create modern and efficient projects",
+      "subtitle": "Specialized in React, Node.js, and devops",
+      "description": "With over 3 years of experience in web development, I create modern and efficient projects",
       "cta": {
-        "portfolio": "View Portfolio",
-        "contact": "Contact Me"
+        "title": "find my profile in Github:",
+        "sub-title": "const gitHubLink = ",
+        "link": "https://github.com/rabbaniha"
       }
     },
     "about": {
@@ -242,8 +241,17 @@
     "backToHome": "Back to Home"
   },
   "metadata": {
-    "title": "Ali Ahmadi - Full Stack Developer",
+    "title": "Heydar Rabbaniha - Full Stack Developer",
     "description": "Professional web developer specialized in React, Node.js, and UI/UX design. Portfolio and modern web development services.",
     "keywords": "Web development, Programmer, React, Node.js, Web design, UI UX, Freelancer"
+  },
+  "footer": {
+    "title": "Find me in: ",
+    "linkedin": "",
+    "linkedin-link": "",
+    "instagram": "",
+    "instagram-link": "",
+    "github": "",
+    "github-link": ""
   }
 }

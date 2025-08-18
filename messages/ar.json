@@ -22,12 +22,10 @@
     "showLess": "عرض أقل"
   },
   "navigation": {
-    "home": "الرئيسية",
+    "name": "حیدر ربانیها",
+    "home": "مرحبا",
     "about": "من أنا",
-    "portfolio": "الأعمال",
-    "services": "الخدمات",
-    "resume": "السيرة الذاتية",
-    "blog": "مدونة",
+    "projects": "الأعمال",
     "contact": "اتصال",
     "switchTheme": "تغيير النمط",
     "switchLanguage": "تغيير اللغة"
@@ -35,13 +33,14 @@
   "home": {
     "hero": {
       "greeting": "مرحباً، أنا",
-      "name": "علي أحمدي",
+      "name": "حیدر ربانیه",
       "title": "مطور Full Stack",
       "subtitle": "متخصص في React، Node.js وتصميم UI/UX",
       "description": "مع أكثر من 5 سنوات خبرة في تطوير الويب، أنشئ مشاريع حديثة وفعّالة",
       "cta": {
-        "portfolio": "عرض الأعمال",
-        "contact": "اتصل بي"
+        "title": "fine my profile in Github:",
+        "sub-title": "const gitHubLink = ",
+        "link": "https://github.com/rabbaniha"
       }
     },
     "about": {
@@ -237,8 +236,17 @@
     "backToHome": "العودة للرئيسية"
   },
   "metadata": {
-    "title": "علي أحمدي - مطور Full Stack",
+    "title": "حیدر ربانیه - مطور Full Stack",
     "description": "مطور ويب محترف متخصص في React، Node.js وتصميم UI/UX. عرض الأعمال وخدمات التطوير الحديث.",
     "keywords": "تطوير الويب، مبرمج، React، Node.js، تصميم الويب، UI UX، مستقل"
+  },
+  "footer": {
+    "title": "Find me in: ",
+    "linkedin": "",
+    "linkedin-link": "",
+    "instagram": "",
+    "instagram-link": "",
+    "github": "",
+    "github-link": ""
   }
 }
