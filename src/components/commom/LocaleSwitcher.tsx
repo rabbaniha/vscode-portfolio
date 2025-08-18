@@ -3,6 +3,13 @@
 import { useRouter, usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { useTransition } from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
+import { Button } from "../ui/button";
 
 export default function LocaleSwitcher() {
   const t = useTranslations("LocaleSwitcher"); // برای ترجمه‌های مربوط به سوئیچر
@@ -27,17 +34,23 @@ export default function LocaleSwitcher() {
   };
 
   return (
-    <select
-      value={locale}
-      onChange={(e) => changeLocale(e.target.value)}
-      disabled={isPending}
-      className="p-2 border rounded"
-    >
-      {locales.map((loc) => (
-        <option key={loc.code} value={loc.code}>
-          {loc.name}
-        </option>
-      ))}
-    </select>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" size="sm">
+          {locale}
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        <DropdownMenuItem onClick={() => changeLocale("fa")}>
+          {t("fa")}
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => changeLocale("en")}>
+          {t("en")}
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => changeLocale("ar")}>
+          {t("ar")}
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }
