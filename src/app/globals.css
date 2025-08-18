@@ -45,8 +45,8 @@
 
 :root {
   --radius: 0.65rem;
-  --font-geist-sans: 'Geist Sans', sans-serif;
-  --font-geist-mono: 'Geist Mono', monospace;
+  --font-geist-sans: "Geist Sans", sans-serif;
+  --font-geist-mono: "Geist Mono", monospace;
 }
 
 /* Monokai (Dark) */
