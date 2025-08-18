@@ -1,0 +1,244 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "System error",
+    "retry": "Retry",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "home": "Home",
+    "readMore": "Read more",
+    "showLess": "Show less"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About Me",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "resume": "Resume",
+    "blog": "Blog",
+    "contact": "Contact",
+    "switchTheme": "Switch Theme",
+    "switchLanguage": "Switch Language"
+  },
+  "home": {
+    "hero": {
+      "greeting": "Hello, I'm",
+      "name": "Ali Ahmadi",
+      "title": "Full Stack Developer",
+      "subtitle": "Specialized in React, Node.js, and UI/UX design",
+      "description": "With over 5 years of experience in web development, I create modern and efficient projects",
+      "cta": {
+        "portfolio": "View Portfolio",
+        "contact": "Contact Me"
+      }
+    },
+    "about": {
+      "title": "About Me",
+      "subtitle": "A bit about my story and experience",
+      "description": "I'm a developer passionate about creating beautiful and functional digital experiences",
+      "skills": "Skills",
+      "experience": "Years of Experience"
+    },
+    "services": {
+      "title": "My Services",
+      "subtitle": "What I can do for you"
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "subtitle": "Projects I’ve built with passion",
+      "viewAll": "View All"
+    },
+    "contact": {
+      "title": "Let's Talk",
+      "subtitle": "Got a new project? Let’s get started",
+      "getInTouch": "Get in Touch"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Learn more about who I am and how I got here",
+    "story": {
+      "title": "My Story",
+      "content": "My journey in programming began in 2019. What started as a simple hobby turned into my professional passion. Today, with over 5 years of experience, I work in modern web development."
+    },
+    "skills": {
+      "title": "Technical Skills",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools"
+    },
+    "experience": {
+      "title": "Work Experience",
+      "education": "Education"
+    },
+    "interests": {
+      "title": "Personal Interests",
+      "content": "When I'm not at the computer, I enjoy reading, hiking in nature, and learning new technologies."
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "A collection of the best projects I’ve done",
+    "categories": {
+      "all": "All",
+      "web": "Websites",
+      "mobile": "Mobile",
+      "desktop": "Desktop",
+      "ui": "UI/UX Design"
+    },
+    "filters": {
+      "technology": "Technology",
+      "category": "Category",
+      "year": "Year"
+    },
+    "project": {
+      "overview": "Project Overview",
+      "technologies": "Technologies",
+      "features": "Features",
+      "challenges": "Challenges",
+      "liveDemo": "Live Demo",
+      "sourceCode": "Source Code",
+      "visitWebsite": "Visit Website",
+      "previousProject": "Previous Project",
+      "nextProject": "Next Project"
+    }
+  },
+  "services": {
+    "title": "My Services",
+    "description": "High-quality services I provide with expertise",
+    "items": {
+      "webDevelopment": {
+        "title": "Web Development",
+        "description": "Design and develop modern, responsive websites",
+        "features": [
+          "Responsive Design",
+          "SEO Optimization",
+          "High Load Speed",
+          "Advanced Security"
+        ]
+      },
+      "mobileApp": {
+        "title": "Mobile App Development",
+        "description": "Build cross-platform mobile applications",
+        "features": [
+          "React Native",
+          "Native UI/UX",
+          "High Performance",
+          "Full Support"
+        ]
+      },
+      "uiux": {
+        "title": "UI/UX Design",
+        "description": "Design beautiful and functional user experiences",
+        "features": [
+          "User Research",
+          "Interactive Prototypes",
+          "Design Systems",
+          "Usability Testing"
+        ]
+      },
+      "consulting": {
+        "title": "Technical Consulting",
+        "description": "Consulting on choosing the best technologies",
+        "features": [
+          "Architecture Review",
+          "Performance Optimization",
+          "System Security",
+          "Scalable Solutions"
+        ]
+      }
+    },
+    "process": {
+      "title": "My Process",
+      "steps": {
+        "consultation": {
+          "title": "Consultation",
+          "description": "Understanding needs and defining project goals"
+        },
+        "planning": {
+          "title": "Planning",
+          "description": "Designing architecture and creating timelines"
+        },
+        "development": {
+          "title": "Development",
+          "description": "High-quality implementation with continuous testing"
+        },
+        "delivery": {
+          "title": "Delivery",
+          "description": "Project handover and post-launch support"
+        }
+      }
+    }
+  },
+  "resume": {
+    "title": "My Resume",
+    "description": "My work and educational experience",
+    "download": "Download Resume",
+    "view": "View Online",
+    "sections": {
+      "experience": "Work Experience",
+      "education": "Education",
+      "skills": "Skills",
+      "certifications": "Certifications",
+      "languages": "Languages"
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "Have a project or a question? Let’s connect",
+    "form": {
+      "name": {
+        "label": "Your Name",
+        "placeholder": "Enter your full name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email address"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Enter the subject"
+      },
+      "message": {
+        "label": "Your Message",
+        "placeholder": "Write your message here..."
+      },
+      "submit": "Send Message",
+      "sending": "Sending..."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "availability": "Availability"
+    },
+    "social": {
+      "title": "Social Networks"
+    },
+    "success": {
+      "title": "Message Sent!",
+      "message": "Thank you for reaching out. I’ll get back to you soon."
+    },
+    "error": {
+      "title": "Sending Error",
+      "message": "Something went wrong. Please try again."
+    }
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you’re looking for doesn’t exist.",
+    "backToHome": "Back to Home"
+  },
+  "metadata": {
+    "title": "Ali Ahmadi - Full Stack Developer",
+    "description": "Professional web developer specialized in React, Node.js, and UI/UX design. Portfolio and modern web development services.",
+    "keywords": "Web development, Programmer, React, Node.js, Web design, UI UX, Freelancer"
+  }
+}
