@@ -18,7 +18,7 @@ const Header = () => {
   }, [cleanPathname]);
 
   return (
-    <section className=" w-full border-b flex items-center justify-between bg-transparent">
+    <section className=" w-full border-b  items-center justify-between bg-transparent hidden lg:flex">
       <div className="flex items-center bg-transparent">
         <div className=" flex items-center justify-start pl-8 pr-16 py-4 border-r">
           {t("name")}
@@ -28,7 +28,7 @@ const Header = () => {
           <Link href={"/"} className=" relative">
             <li className=" border-r px-7 py-4">{t("home")}</li>
             <div
-              className={`absolute h-2 bottom-0 right-0 left-0 bg-accent  ${
+              className={`absolute h-2 bottom-0 right-0 left-0 bg-primary  ${
                 cleanPathname === "" ? "visible" : "hidden"
               } ${
                 previousPath.current === "/about"
@@ -45,7 +45,7 @@ const Header = () => {
           <Link href={"/about"} className=" relative">
             <li className=" border-r px-7 py-4">{t("about")}</li>
             <div
-              className={`absolute h-2 bottom-0 right-0 left-0 bg-accent  ${
+              className={`absolute h-2 bottom-0 right-0 left-0 bg-primary  ${
                 cleanPathname === "/about" ? "visible" : "hidden"
               } ${
                 previousPath.current === ""
@@ -62,7 +62,7 @@ const Header = () => {
           <Link href={"/project"} className=" relative">
             <li className=" border-r px-7 py-4">{t("project")}</li>
             <div
-              className={`absolute h-2 bottom-0 right-0 left-0 bg-accent ${
+              className={`absolute h-2 bottom-0 right-0 left-0 bg-primary ${
                 cleanPathname === "/project" ? "visible" : "hidden"
               }  ${
                 previousPath.current === ""
@@ -79,7 +79,7 @@ const Header = () => {
           <Link href={"contact"} className=" relative">
             <li className=" border-r px-7 py-4">{t("contact")}</li>
             <div
-              className={`absolute h-2 bottom-0 right-0 left-0 bg-accent ${
+              className={`absolute h-2 bottom-0 right-0 left-0 bg-primary ${
                 cleanPathname === "/contact" ? "visible" : "hidden"
               } ${
                 previousPath.current === ""
