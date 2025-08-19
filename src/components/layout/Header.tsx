@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <section className=" w-full border-b  items-center justify-between bg-transparent hidden lg:flex">
       <div className="flex items-center bg-transparent">
-        <div className=" flex items-center justify-start pl-8 pr-16 py-4 border-r">
+        <div className=" flex items-center justify-start pl-8 pr-16 py-4 border-r w-64">
           {t("name")}
         </div>
 
