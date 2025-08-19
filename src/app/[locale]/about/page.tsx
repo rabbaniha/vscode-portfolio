@@ -1,9 +1,12 @@
-import React from 'react'
+import DesktopAbout from "@/components/about/desktop/DesktopAbout";
+import React from "react";
 
 const Aboutpage = () => {
   return (
-    <div>Aboutpage</div>
-  )
-}
+    <main className=" h-full w-full">
+      <DesktopAbout />
+    </main>
+  );
+};
 
-export default Aboutpage
+export default Aboutpage;
