@@ -22,6 +22,7 @@
     "showLess": "Show less"
   },
   "navigation": {
+    "title": "#navigate to:",
     "name": "heydar-rabbaniha",
     "home": "_hello",
     "about": "_about-me",

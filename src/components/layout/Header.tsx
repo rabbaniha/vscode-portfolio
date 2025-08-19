@@ -1,10 +1,9 @@
 "use client";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useRef } from "react";
 import { ThemeSwitcher } from "../commom/ThemeSwitcher";
 import LocaleSwitcher from "../commom/LocaleSwitcher";
-import { usePathname } from "next/navigation";
 
 const Header = () => {
   const t = useTranslations("navigation");
@@ -29,7 +28,7 @@ const Header = () => {
             <li className=" border-r px-7 py-4">{t("home")}</li>
             <div
               className={`absolute h-2 bottom-0 right-0 left-0 bg-primary  ${
-                cleanPathname === "" ? "visible" : "hidden"
+                cleanPathname === "/" ? "visible" : "hidden"
               } ${
                 previousPath.current === "/about"
                   ? "animate-entry-right-100"
@@ -48,7 +47,7 @@ const Header = () => {
               className={`absolute h-2 bottom-0 right-0 left-0 bg-primary  ${
                 cleanPathname === "/about" ? "visible" : "hidden"
               } ${
-                previousPath.current === ""
+                previousPath.current === "/"
                   ? "animate-entry-left-100"
                   : previousPath.current === "/project"
                   ? "animate-entry-right-100"
@@ -65,7 +64,7 @@ const Header = () => {
               className={`absolute h-2 bottom-0 right-0 left-0 bg-primary ${
                 cleanPathname === "/project" ? "visible" : "hidden"
               }  ${
-                previousPath.current === ""
+                previousPath.current === "/"
                   ? "animate-entry-left-200"
                   : previousPath.current === "/about"
                   ? "animate-entry-left-100"
@@ -82,7 +81,7 @@ const Header = () => {
               className={`absolute h-2 bottom-0 right-0 left-0 bg-primary ${
                 cleanPathname === "/contact" ? "visible" : "hidden"
               } ${
-                previousPath.current === ""
+                previousPath.current === "/"
                   ? "animate-entry-left-300"
                   : previousPath.current === "/about"
                   ? "animate-entry-left-200"

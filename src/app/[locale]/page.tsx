@@ -1,7 +1,6 @@
 import SnakeGame from "@/components/home/SnakeGame";
 import Header from "@/components/layout/Header";
 import { Link } from "@/i18n/navigation";
-import { div } from "framer-motion/client";
 import { ChevronRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 
