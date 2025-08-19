@@ -54,7 +54,7 @@ A modern, interactive portfolio website inspired by Visual Studio Code interface
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/heydarrabbaniha/vscode-portfolio.git
+   git clone https://github.com/rabbaniha/vscode-portfolio.git
    cd vscode-portfolio
    ```
 
@@ -101,7 +101,7 @@ vscode-portfolio/
 
 This project is optimized for deployment on [Vercel](https://vercel.com/):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/heydarrabbaniha/vscode-portfolio)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/rabbaniha/vscode-portfolio)
 
 ### Manual Deployment
 
@@ -141,7 +141,7 @@ This project is open source and available under the [MIT License](LICENSE).
 **Heydar Rabbaniha**
 
 - Email: heydarrabbaniha@gmail.com
-- GitHub: [@heydarrabbaniha](https://github.com/heydarrabbaniha)
+- GitHub: [@rabbaniha](https://github.com/rabbaniha)
 
 ## 🙏 Acknowledgments
 
