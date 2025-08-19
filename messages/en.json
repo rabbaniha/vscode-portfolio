@@ -67,6 +67,15 @@
     }
   },
   "about": {
+    "personal": {
+      "title": "personal-info",
+      "bio": {
+        "title": "bio",
+        "description": "I'm a developer passionate about creating beautiful and functional digital experiences"
+      }
+    },
+    "professional": {},
+    "hobbies": {},
     "title": "About Me",
     "description": "Learn more about who I am and how I got here",
     "story": {
