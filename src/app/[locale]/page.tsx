@@ -2,7 +2,7 @@
 import SnakeGame from "@/components/home/SnakeGame";
 import { Link } from "@/i18n/navigation";
 import { ChevronRight } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { easeInOut, easeOut, motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -130,6 +130,7 @@ const snakeGameVariants = {
 };
 
 export default function HomePage() {
+  const locale = useLocale();
   const t = useTranslations("home.hero");
 
   return (
@@ -233,7 +234,9 @@ export default function HomePage() {
               >
                 {t("cta.link")}
                 <motion.span
-                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"
+                  className={`absolute -bottom-1  w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300 ${
+                    locale === "en" ? "left-0" : "right-0"
+                  }`}
                   whileHover={{ width: "100%" }}
                 />
               </Link>

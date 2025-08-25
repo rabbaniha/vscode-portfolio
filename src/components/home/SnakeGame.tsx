@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { Button } from "../ui/button";
 
 type Point = { x: number; y: number };
 
@@ -164,9 +165,7 @@ export default function SnakeGame() {
           </div>
         </div>
 
-        <button className="mt-4 bg-muted hover:bg-muted/80 text-muted-foreground px-4 py-1 rounded-lg">
-          skip
-        </button>
+        <Button variant={"ghost"}>skip</Button>
       </div>
     </div>
   );
