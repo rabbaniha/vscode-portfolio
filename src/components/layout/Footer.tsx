@@ -1,7 +1,9 @@
 "use client";
 import { Link } from "@/i18n/navigation";
-import { Github, Instagram, Linkedin } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import React from "react";
 
 const Footer = () => {
@@ -25,7 +27,7 @@ const Footer = () => {
                 locale === "en" ? "border-r" : "border-l"
               }`}
             >
-              <Linkedin size={18} />
+              <LinkedInIcon width={20} />
             </li>
           </Link>
 
@@ -35,7 +37,7 @@ const Footer = () => {
                 locale === "en" ? "border-r" : "border-l"
               }`}
             >
-              <Instagram size={18} />
+              <InstagramIcon width={20} />
             </li>
           </Link>
         </ul>
@@ -52,7 +54,7 @@ const Footer = () => {
           href={"https://github.com/rabbaniha"}
         >
           <span className=" text-xs hidden md:block">@rabbaniha</span>
-          <Github size={18} />
+          <GitHubIcon width={20} />
         </Link>
       </div>
     </section>
