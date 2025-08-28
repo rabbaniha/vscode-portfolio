@@ -72,6 +72,14 @@
       "bio": {
         "title": "bio",
         "description": "I'm a developer passionate about creating beautiful and functional digital experiences"
+      },
+      "interests": {
+        "title": "interests",
+        "description": "I'm a developer passionate about creating beautiful and functional digital experiences"
+      },
+      "education": {
+        "title": "education",
+        "description": "I'm a developer passionate about creating beautiful and functional digital experiences"
       }
     },
     "professional": {},
