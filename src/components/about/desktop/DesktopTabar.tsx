@@ -11,11 +11,7 @@ const DesktopTabbar = () => {
 
   return (
     <>
-      {activeContentTab === null ? (
-        <div className=" w-full h-full flex items-center justify-center">
-          No content to show
-        </div>
-      ) : (
+      {activeContentTab !== null && (
         <div className="w-full h-12  border-b flex items-center">
           {openTabs.map((tab) => (
             <div

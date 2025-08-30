@@ -28,7 +28,7 @@ const DesktopAbout = () => {
         <DetailsSidebar tab={activeSideTap} />
       </div>
       <div className="h-full w-full flex flex-col">
-        <div className=" ">
+        <div className=" w-full ">
           <DesktopTabar />
         </div>
         <DesktopContent />
