@@ -17,7 +17,7 @@ const DesktopContent = () => {
       ) : (
         <>
           {activeContentTab === "bio" && (
-            <div className="w-full h-[60vh] overflow-y-auto space-y-2">
+            <div className="w-full h-[58vh] overflow-y-auto space-y-2 scrollbar-vscode">
               <CodeLikeText text={t("personal.bio.description")} />
             </div>
           )}
