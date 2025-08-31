@@ -71,7 +71,7 @@
       "title": "personal-info",
       "bio": {
         "title": "bio",
-        "description": "I'm a developer passionate about creating beautiful and functional digital experiences"
+        "description": "I am a Full-Stack Web Developer passionate about building scalable and user-friendly applications. My core stack includes Node.js, Express, React, Next.js, MongoDB, SQL, and Docker, and I have hands-on experience in designing and deploying complete web applications. I enjoy tackling challenges across both frontend and backend, from crafting responsive user interfaces to optimizing server performance and database management. My projects often integrate modern deployment practices (CI/CD) and efficient server management with PM2 and Jenkins. In addition to web development, I am interested in artificial intelligence, small language models, and data-driven applications. I have developed systems that leverage satellite data for agricultural monitoring, irrigation management, and plant growth analysis, combining cutting-edge technology with real-world problem-solving. I am continuously exploring new tools and frameworks to improve my workflow and deliver high-quality solutions. My focus is on writing clean, maintainable code and building products that make a meaningful impact. Currently, I am expanding my portfolio with active projects and preparing to launch a YouTube channel dedicated to data structures and algorithms, aiming to share knowledge and support fellow developers in their learning journey."
       },
       "interests": {
         "title": "interests",
