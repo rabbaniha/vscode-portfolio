@@ -9,7 +9,7 @@ const DesktopContent = () => {
   const t = useTranslations("about");
 
   return (
-    <div className="p-8 w-full flex-1 min-h-0 flex items-start justify-start bg-gray-900">
+    <div className="p-8 w-full flex-1 min-h-0 flex items-start justify-start ">
       {activeContentTab === null ? (
         <div className="w-full h-full flex items-center justify-center">
           No content to show
@@ -18,7 +18,10 @@ const DesktopContent = () => {
         <>
           {activeContentTab === "bio" && (
             <div className="w-full h-[58vh] overflow-y-auto space-y-2 scrollbar-vscode">
-              <CodeLikeText text={t("personal.bio.description")} />
+              <CodeLikeText
+                text={t("personal.bio.description")}
+                uniqueKey={"about-bio"}
+              />
             </div>
           )}
           {activeContentTab === "interests" && <div>Interests</div>}

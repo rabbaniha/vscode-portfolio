@@ -14,8 +14,12 @@ import { useContentTabStore } from "@/stores";
 const PersonalTab = () => {
   const locale = useLocale();
   const p = useTranslations("about.personal");
-  const { setActiveContentTab, activeContentTab, openTabs } =
-    useContentTabStore();
+  const {
+    setActiveContentTab,
+    activeContentTab,
+    openTabsForFolders,
+    updateOpenTabs,
+  } = useContentTabStore();
 
   return (
     <div>
@@ -28,7 +32,9 @@ const PersonalTab = () => {
           <Accordion
             type="multiple"
             className="w-full"
-            defaultValue={openTabs as string[]}
+            defaultValue={openTabsForFolders as string[]}
+            value={openTabsForFolders as string[]}
+            onValueChange={updateOpenTabs}
           >
             <AccordionItem value="bio" className="border-b-0 ">
               <AccordionTrigger

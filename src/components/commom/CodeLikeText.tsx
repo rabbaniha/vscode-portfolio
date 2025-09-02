@@ -1,19 +1,20 @@
 "use client";
 
+import { useTypingStore } from "@/stores/typingStore";
 import { useEffect, useState, useRef } from "react";
 
 type Props = {
   text: string;
-  typingSpeed?: number; // میلی‌ثانیه بین هر کاراکتر
-  lineDelay?: number; // مکث بین خط‌ها
-  autoStart?: boolean; // شروع خودکار انیمیشن
+  typingSpeed?: number;
+  lineDelay?: number;
+  uniqueKey: string; // اجباری
 };
 
 function CodeLikeText({
   text,
   typingSpeed = 5,
   lineDelay = 10,
-  autoStart = true,
+  uniqueKey,
 }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [lines, setLines] = useState<string[]>([]);
@@ -21,6 +22,10 @@ function CodeLikeText({
   const [currentLineIndex, setCurrentLineIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(false);
+
+  // Zustand store
+  const { hasBeenTyped, markAsTyped } = useTypingStore();
+  const hasTyped = hasBeenTyped(uniqueKey);
 
   // محاسبه خط‌ها بر اساس عرض container
   useEffect(() => {
@@ -54,22 +59,41 @@ function CodeLikeText({
 
     setLines(result);
 
-    // ریست انیمیشن برای متن جدید
-    if (autoStart) {
+    // اگر قبلاً تایپ شده، همه خط‌ها را نمایش بده
+    if (hasTyped) {
+      setDisplayedLines(result);
+      setIsTyping(false);
+    } else {
+      // Reset برای شروع انیمیشن جدید
       setDisplayedLines([]);
       setCurrentLineIndex(0);
       setCurrentCharIndex(0);
       setIsTyping(true);
     }
-  }, [text, autoStart]);
+  }, [text, hasTyped]); // حذف uniqueKey از اینجا
 
   // انیمیشن typing
   useEffect(() => {
-    if (!isTyping || currentLineIndex >= lines.length || lines.length === 0) {
-      setIsTyping(false);
+    console.log("Has typed: ", hasTyped);
+    console.log("Is typing: ", isTyping);
+    console.log("Current line index: ", currentLineIndex);
+    console.log("Lines length: ", lines.length);
+
+    if (
+      hasTyped ||
+      !isTyping ||
+      currentLineIndex >= lines.length ||
+      lines.length === 0
+    ) {
+      if (isTyping && !hasTyped && lines.length > 0) {
+        // انیمیشن تمام شد، در store ذخیره کن
+        markAsTyped(uniqueKey);
+        setIsTyping(false);
+      }
       return;
     }
 
+    console.log("Start typing");
     const currentLine = lines[currentLineIndex];
 
     if (currentCharIndex <= currentLine.length) {
@@ -83,7 +107,6 @@ function CodeLikeText({
         });
 
         if (currentCharIndex === currentLine.length) {
-          // خط تکمیل شد، برو به خط بعدی
           setTimeout(() => {
             setCurrentLineIndex((prev) => prev + 1);
             setCurrentCharIndex(0);
@@ -102,28 +125,13 @@ function CodeLikeText({
     isTyping,
     typingSpeed,
     lineDelay,
-  ]);
-
-  const startTyping = () => {
-    setDisplayedLines([]);
-    setCurrentLineIndex(0);
-    setCurrentCharIndex(0);
-    setIsTyping(true);
-  };
-
-  useEffect(() => {
-    startTyping();
-  }, []);
-
-  const stopTyping = () => {
-    setIsTyping(false);
-    // نمایش کامل همه خط‌ها
-    setDisplayedLines([...lines]);
-  };
+    hasTyped,
+    uniqueKey,
+    markAsTyped,
+  ]); // text را حذف کردیم
 
   return (
     <div className="w-full">
-      {/* محتوای اصلی */}
       <div
         ref={containerRef}
         className="w-full h-full overflow-y-auto space-y-2 font-mono p-4 rounded"
@@ -139,7 +147,6 @@ function CodeLikeText({
             </div>
             <span className="relative">
               {line}
-              {/* نشانگر cursor فقط در خط فعلی */}
               {index === currentLineIndex && isTyping && (
                 <span className="animate-pulse text-primary ml-1">|</span>
               )}
