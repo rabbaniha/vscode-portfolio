@@ -26,6 +26,19 @@
     scrollbar-width: thin;
     scrollbar-color: #4b5563 transparent;
   }
+
+  .scrollbar-hide {
+    scrollbar-width: none; /* مخفی کردن اسکرول‌بار */
+  }
+  /* IE/Edge Legacy */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* مخفی کردن اسکرول‌بار */
+  }
+  /* Chrome / Safari / Edge (کرومیوم) */
+  .scrollbar-hide::-webkit-scrollbar {
+    width: 0; /* عمودی */
+    height: 0; /* افقی */
+  }
 }
 
 @theme inline {
