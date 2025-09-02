@@ -71,19 +71,35 @@
       "title": "personal-info",
       "bio": {
         "title": "bio",
-        "description": "I am a Full-Stack Web Developer passionate about building scalable and user-friendly applications. My core stack includes Node.js, Express, React, Next.js, MongoDB, SQL, and Docker, and I have hands-on experience in designing and deploying complete web applications. I enjoy tackling challenges across both frontend and backend, from crafting responsive user interfaces to optimizing server performance and database management. My projects often integrate modern deployment practices (CI/CD) and efficient server management with PM2 and Jenkins. In addition to web development, I am interested in artificial intelligence, small language models, and data-driven applications. I have developed systems that leverage satellite data for agricultural monitoring, irrigation management, and plant growth analysis, combining cutting-edge technology with real-world problem-solving. I am continuously exploring new tools and frameworks to improve my workflow and deliver high-quality solutions. My focus is on writing clean, maintainable code and building products that make a meaningful impact. Currently, I am expanding my portfolio with active projects and preparing to launch a YouTube channel dedicated to data structures and algorithms, aiming to share knowledge and support fellow developers in their learning journey."
+        "description": "I am a Full-Stack Web Developer skilled in Node.js, Express, React, Next.js, MongoDB, SQL, and Docker. I specialize in designing and deploying scalable, user-friendly applications with a focus on clean code and performance optimization. My experience spans both frontend and backend development, as well as server management and deployment automation using CI/CD pipelines and PM2. I am particularly interested in integrating AI and small language models into web applications to deliver smarter solutions. I have worked on projects involving satellite data analysis for agricultural monitoring and irrigation systems, combining innovation with real-world problem-solving. Currently, I am building my portfolio and preparing to launch a YouTube channel on data structures and algorithms to share knowledge with the developer community."
       },
       "interests": {
         "title": "interests",
-        "description": "I'm a developer passionate about creating beautiful and functional digital experiences"
+        "description": "I am deeply interested in exploring modern web development frameworks and building scalable applications using technologies like React, Next.js, Node.js, and Docker. I enjoy learning about cloud infrastructure, DevOps practices, and CI/CD pipelines, as they help me deliver more efficient and reliable software. Another area of interest for me is artificial intelligence, especially the integration of small language models into real-world applications. I am also passionate about data-driven systems, including projects that leverage satellite data for monitoring and analysis. In addition, I enjoy studying software architecture, performance optimization, and clean code practices, always striving to improve both my technical skills and problem-solving abilities."
       },
       "education": {
         "title": "education",
-        "description": "I'm a developer passionate about creating beautiful and functional digital experiences"
+        "description": "I hold a Bachelor’s degree in Agronomy and Plant Breeding and a Master’s degree in Plant Genetics and Breeding. During my academic journey, I developed a strong foundation in molecular biology, plant breeding, and bioinformatics, which gave me valuable experience in scientific research and data analysis. For my Master’s thesis, I focused on identifying microRNAs in Mentha longifolia (wild mint) using BLASTN and Enfold software. This project allowed me to gain hands-on experience in working with biological data, computational tools, and problem-solving in a research-driven environment. Although my career path later shifted toward software development, my academic background continues to shape my analytical thinking and systematic approach to solving complex problems. The combination of scientific training and programming skills enables me to connect theory with application, which I now apply in creating innovative, data-driven software solutions."
       }
     },
-    "professional": {},
-    "hobbies": {},
+    "professional": {
+      "title": "professional-info",
+      "experienc": {
+        "title": "experienc",
+        "description": "I have practical experience as a Full-Stack Web Developer, working with technologies such as Node.js, Express, React, Next.js, MongoDB, SQL, and Docker. My work includes designing and deploying end-to-end web applications, handling both frontend and backend development, and managing databases. I also have hands-on knowledge in server management and deployment automation, using tools like PM2, Jenkins, and CI/CD pipelines to ensure reliability and scalability. Beyond traditional web apps, I have worked on data-driven systems, including projects that apply satellite data for agricultural monitoring and irrigation management. These experiences have strengthened my ability to connect technical solutions with real-world challenges."
+      },
+      "skills": {
+        "title": "skills",
+        "description": "My core skills include full-stack development, database design, server deployment, and cloud-based solutions. I am passionate about building scalable, high-performance applications and applying clean code practices in every project I work on. I actively explore emerging technologies such as artificial intelligence, small language models, and automation pipelines, integrating them into my projects where they add value. My professional focus is on developing innovative, data-driven software solutions that combine efficiency with practical usability. I am continuously learning and experimenting with new frameworks and tools, aiming to stay updated with the latest trends in web development while keeping a strong focus on problem-solving and impactful solutions."
+      }
+    },
+    "hobbies": {
+      "title": "hobbies",
+      "hobbies": {
+        "title": "hobbies",
+        "description": "Outside of my professional work, I enjoy activities that keep me creative and balanced. I like reading books and articles on technology, innovation, and personal growth, as well as exploring new trends in AI and software development. In my free time, I enjoy watching movies and series, as well as educational videos and content creation, which connect with my passion for learning and sharing knowledge. Beyond technology, I find relaxation in listening to music, walking in nature, and exploring new places, which help me recharge and stay motivated. I also like experimenting with side programming projects, where I can combine learning with creativity and later apply new ideas to real-world applications."
+      }
+    },
     "title": "About Me",
     "description": "Learn more about who I am and how I got here",
     "story": {
