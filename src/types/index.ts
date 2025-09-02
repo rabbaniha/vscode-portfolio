@@ -1,4 +1,11 @@
-export type ActiveContentTabType = "bio" | "interests" | "education" | null;
+export type ActiveContentTabType =
+  | "bio"
+  | "interests"
+  | "education"
+  | "experienc"
+  | "skills"
+  | "hobbies"
+  | null;
 
 export type ContentTabStoreType = {
   activeContentTab: ActiveContentTabType;
