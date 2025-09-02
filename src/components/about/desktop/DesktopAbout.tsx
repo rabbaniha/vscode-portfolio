@@ -16,18 +16,20 @@ const DesktopAbout = () => {
   return (
     <section className=" hidden lg:flex h-full w-full">
       <div
-        className={`h-full w-20 py-4 px-1 ${
+        className={`h-full w-[5%] py-4 px-1 ${
           locale === "en" ? "border-r" : "border-lu"
         }`}
       >
         <InfoIcons setActiveTab={setActiveSideTab} acitveTab={activeSideTap} />
       </div>
       <div
-        className={`h-full w-60 ${locale === "en" ? "border-r" : "border-l"}`}
+        className={`h-full w-[17%] ${
+          locale === "en" ? "border-r" : "border-l"
+        }`}
       >
         <DetailsSidebar tab={activeSideTap} />
       </div>
-      <div className="h-full w-full flex flex-col">
+      <div className="h-full w-[78%] flex flex-col">
         <div className=" w-full ">
           <DesktopTabar />
         </div>

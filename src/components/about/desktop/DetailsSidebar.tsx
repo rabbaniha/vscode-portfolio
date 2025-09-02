@@ -1,5 +1,7 @@
 import React from "react";
 import PersonalTab from "./PersonalTab";
+import PrefessionalTabs from "./PrefessionalTabs";
+import HobbiesTab from "./HobbiesTab";
 
 const DetailsSidebar = ({
   tab,
@@ -9,8 +11,8 @@ const DetailsSidebar = ({
   return (
     <div className=" py-4">
       {tab === "personal" && <PersonalTab />}
-      {tab === "professional" && <div>professional</div>}
-      {tab === "hobbies" && <div>hobbies</div>}
+      {tab === "professional" && <PrefessionalTabs />}
+      {tab === "hobbies" && <HobbiesTab />}
     </div>
   );
 };

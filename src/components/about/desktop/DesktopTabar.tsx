@@ -1,22 +1,23 @@
 "use client";
 import { useContentTabStore } from "@/stores";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 
 const DesktopTabbar = () => {
   const locale = useLocale();
+  const t = useTranslations();
   const { openTabs, activeContentTab, setActiveContentTab, closeTab } =
     useContentTabStore();
 
   return (
     <>
       {activeContentTab !== null && (
-        <div className="w-full h-12  border-b flex items-center">
+        <div className="max-w-full h-12  border-b flex items-center overflow-x-auto whitespace-nowrap scrollbar-hide">
           {openTabs.map((tab) => (
             <div
               key={tab}
-              className={` px-4 py-0 h-full  flex items-center gap-4 transition ${
+              className={` px-4 py-0 h-full  flex items-center gap-20 transition ${
                 activeContentTab === tab ? "bg-muted" : ""
               } ${locale === "en" ? "border-r" : "border-l"}`}
             >
