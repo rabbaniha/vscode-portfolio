@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type ActiveContentTabType =
   | "bio"
   | "interests"
@@ -15,3 +17,8 @@ export type ContentTabStoreType = {
   closeTab: (tab: ActiveContentTabType) => void;
   updateOpenTabs: (tabs: string[]) => void;
 };
+
+export interface Skill{
+  name: string,
+  icon: (props) => React.JSX.Element
+}
