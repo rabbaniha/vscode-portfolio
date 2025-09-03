@@ -100,6 +100,7 @@
         "description": "Outside of my professional work, I enjoy activities that keep me creative and balanced. I like reading books and articles on technology, innovation, and personal growth, as well as exploring new trends in AI and software development. In my free time, I enjoy watching movies and series, as well as educational videos and content creation, which connect with my passion for learning and sharing knowledge. Beyond technology, I find relaxation in listening to music, walking in nature, and exploring new places, which help me recharge and stay motivated. I also like experimenting with side programming projects, where I can combine learning with creativity and later apply new ideas to real-world applications."
       }
     },
+
     "title": "About Me",
     "description": "Learn more about who I am and how I got here",
     "story": {
@@ -119,6 +120,20 @@
     "interests": {
       "title": "Personal Interests",
       "content": "When I'm not at the computer, I enjoy reading, hiking in nature, and learning new technologies."
+    }
+  },
+  "projects": {
+    "mazraebaan": {
+      "title": "Mazraebaan",
+      "description": "My journey in programming began in 2019. What started as a simple hobby turned into my professional passion. Today, with over 5 years of experience, I work in modern web development.",
+      "link": "https://mazraebaan.com",
+      "technologies": "nodejs, expressjs, nextjs, tailwindcss, mongodb, shadcnui"
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "My journey in programming began in 2019. What started as a simple hobby turned into my professional passion. Today, with over 5 years of experience, I work in modern web development.",
+      "link": "https://portfolio-seven-bay-88.vercel.app",
+      "technologies": "nextjs, typescript, tailwindcss, shadcnui"
     }
   },
   "portfolio": {
