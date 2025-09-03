@@ -10,7 +10,7 @@ const Footer = () => {
   const locale = useLocale();
   const t = useTranslations("footer");
   return (
-    <section className=" w-full border-t flex items-center justify-stretch md:justify-between bg-transparent">
+    <section className="z-50 fixed bottom-4 inset-x-0 w-full border-t flex items-center justify-stretch md:justify-between bg-transparent">
       <div className="flex items-center bg-transparent">
         <div
           className={`flex items-center justify-start px-6 py-4 ${

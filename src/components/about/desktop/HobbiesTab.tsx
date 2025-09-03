@@ -23,7 +23,7 @@ const HobbiesTab = () => {
 
   return (
     <div>
-      <div className=" flex items-center gap-2  border-b px-2 h-8 pb-2">
+      <div className="hidden lg:flex items-center gap-2  border-b px-2 h-8 pb-2">
         <ArrowDropDownIcon />
         <p className=" text-md">{p("title")}</p>
       </div>

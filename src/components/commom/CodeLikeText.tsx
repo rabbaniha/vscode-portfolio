@@ -141,7 +141,7 @@ function CodeLikeText({
             key={index}
             className="grid grid-cols-[50px_auto] items-start gap-2"
           >
-            <div className="relative">
+            <div className="hidden md:block relative">
               <span className="text-gray-500">{`${index + 1}`}</span>
               <span className="absolute inset-x-9 text-gray-600">*</span>
             </div>

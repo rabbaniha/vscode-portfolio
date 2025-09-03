@@ -25,7 +25,7 @@ const DesktopContent = () => {
               className="w-full h-[58vh] overflow-y-auto space-y-2 scrollbar-vscode"
             >
               <CodeLikeText
-                text={t("personal.bio.description")}
+                text={t(`personal.${activeContentTab}.description`)}
                 uniqueKey={"about-bio"}
               />
             </motion.div>
