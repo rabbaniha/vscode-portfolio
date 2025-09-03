@@ -1,9 +1,12 @@
-import React from 'react'
+import Projects from "@/components/projects/Projects";
+import React from "react";
 
 const ProjectPage = () => {
   return (
-    <div>ProjectPage</div>
-  )
-}
+    <div className=" w-full h-full">
+      <Projects />
+    </div>
+  );
+};
 
-export default ProjectPage
+export default ProjectPage;

@@ -38,7 +38,7 @@ export default async function LocaleLayout({
                border-border rounded-sm  flex items-center justify-center "
               >
                 <div
-                  className={`flex justify-between w-full h-full flex-col bg-transparent ${fira.className}`}
+                  className={`flex justify-between w-full h-full flex-col bg-transparent relative ${fira.className}`}
                 >
                   <Header />
                   <MobileHeader />
