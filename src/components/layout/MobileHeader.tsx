@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import React from "react";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetHeader,
   SheetTitle,
@@ -45,25 +46,33 @@ const MobileHeader = () => {
               className={` px-4 py-3 border-t-2 border-b-2 hover:bg-primary/90 transition-all duration-200
                  ${cleanPathname === "/" && "bg-primary"}`}
             >
-              <Link href={"/"}>{n("home")}</Link>
+              <SheetClose asChild>
+                <Link href={"/"}>{n("home")}</Link>
+              </SheetClose>
             </li>
             <li
               className={` px-4 py-3  border-b-2 hover:bg-primary/90 transition-all duration-200
                  ${cleanPathname === "/about" && "bg-primary"}`}
             >
-              <Link href={"/about"}>{n("about")}</Link>
+              <SheetClose asChild>
+                <Link href={"/about"}>{n("about")}</Link>
+              </SheetClose>
             </li>
             <li
               className={` px-4 py-3  border-b-2 hover:bg-primary/90 transition-all duration-200
                  ${cleanPathname === "/project" && "bg-primary"}`}
             >
-              <Link href={"/project"}>{n("project")}</Link>
+              <SheetClose asChild>
+                <Link href={"/project"}>{n("project")}</Link>
+              </SheetClose>
             </li>
             <li
               className={` px-4 py-3  border-b-2 hover:bg-primary/90 transition-all duration-200
                  ${cleanPathname === "/contact" && "bg-primary"}`}
             >
-              <Link href={"/contact"}>{n("contact")}</Link>
+              <SheetClose asChild>
+                <Link href={"/contact"}>{n("contact")}</Link>
+              </SheetClose>
             </li>
           </ul>
         </SheetContent>
