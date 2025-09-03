@@ -17,7 +17,7 @@ const DesktopAbout = () => {
     <section className=" hidden lg:flex h-full w-full">
       <div
         className={`h-full w-[5%] py-4 px-1 ${
-          locale === "en" ? "border-r" : "border-lu"
+          locale === "en" ? "border-r" : "border-l"
         }`}
       >
         <InfoIcons setActiveTab={setActiveSideTab} acitveTab={activeSideTap} />
