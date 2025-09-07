@@ -205,11 +205,14 @@
   },
   "contact": {
     "title": "_contact-me",
-    "fine-me": {
-      "title": "fine-me-also-in",
-      "linkedin": "",
-      "instagram": "",
-      "github": ""
+    "phone": "+989196163235",
+    "email": "heydarrabbaniha@gmail.com",
+    "find-me": {
+      "title": "find-me-also-in",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "github": "Github",
+      "youtube": "YouTube"
     },
     "description": "Have a project or a question? Let’s connect",
     "form": {
