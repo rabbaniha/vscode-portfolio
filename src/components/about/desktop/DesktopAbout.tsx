@@ -26,11 +26,15 @@ const DesktopAbout = () => {
             acitveTab={activeSideTap}
           />
         </div>
-        <div className={`h-full w-[80%]  ${locale === "en" ? "border-r" : "border-l"}`}>
+        <div
+          className={`h-full w-[80%]  ${
+            locale === "en" ? "border-r" : "border-l"
+          }`}
+        >
           <DetailsSidebar tab={activeSideTap} />
         </div>
       </div>
-      <div className="h-full w-[78%] flex flex-col col-span-7">
+      <div className="h-full  flex flex-col col-span-7">
         <div className=" w-full ">
           <DesktopTabar />
         </div>
