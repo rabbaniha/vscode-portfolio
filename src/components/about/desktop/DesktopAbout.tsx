@@ -14,22 +14,23 @@ const DesktopAbout = () => {
   >("personal");
 
   return (
-    <section className=" hidden lg:flex h-full w-full">
-      <div
-        className={`h-full w-[5%] py-4 px-1 ${
-          locale === "en" ? "border-r" : "border-l"
-        }`}
-      >
-        <InfoIcons setActiveTab={setActiveSideTab} acitveTab={activeSideTap} />
+    <section className=" hidden lg:grid lg:grid-cols-9 h-full w-full">
+      <div className=" col-span-2 flex">
+        <div
+          className={`h-full w-[20%]  py-4 px-1 ${
+            locale === "en" ? "border-r" : "border-l"
+          }`}
+        >
+          <InfoIcons
+            setActiveTab={setActiveSideTab}
+            acitveTab={activeSideTap}
+          />
+        </div>
+        <div className={`h-full w-[80%]  ${locale === "en" ? "border-r" : "border-l"}`}>
+          <DetailsSidebar tab={activeSideTap} />
+        </div>
       </div>
-      <div
-        className={`h-full w-[17%] ${
-          locale === "en" ? "border-r" : "border-l"
-        }`}
-      >
-        <DetailsSidebar tab={activeSideTap} />
-      </div>
-      <div className="h-full w-[78%] flex flex-col">
+      <div className="h-full w-[78%] flex flex-col col-span-7">
         <div className=" w-full ">
           <DesktopTabar />
         </div>

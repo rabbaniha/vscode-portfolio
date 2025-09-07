@@ -10,40 +10,29 @@ const Footer = () => {
   const locale = useLocale();
   const t = useTranslations("footer");
   return (
-    <section className="z-50 bg-transparent w-full border-t flex items-center justify-stretch md:justify-between ">
-      <div className="flex items-center bg-transparent">
-        <div
-          className={`flex items-center justify-start px-6 py-4 ${
-            locale === "en" ? "border-r" : "border-l"
-          }`}
-        >
-          {t("title")}
-        </div>
-
-        <ul className=" flex items-center justify-center">
-          <Link href={t("linkedin-link")}>
-            <li
-              className={`px-5 py-3 md:px-5 md:py-3 ${
-                locale === "en" ? "border-r" : "border-l"
-              }`}
-            >
-              <LinkedInIcon width={20} />
-            </li>
-          </Link>
-
-          <Link href={t("instagram-link")}>
-            <li
-              className={`px-5 py-3 md:px-5 md:py-3 ${
-                locale === "en" ? "border-r" : "border-l"
-              }`}
-            >
-              <InstagramIcon width={20} />
-            </li>
-          </Link>
-        </ul>
-      </div>
+    <section className="z-50 bg-transparent  w-full border-t flex items-center justify-stretch lg:grid lg:grid-cols-9 ">
       <div
-        className={`bg-transparent flex items-center gap-2 ${
+        className={`flex items-center justify-center gap-8 bg-transparent col-span-2 ${
+          locale === "en" ? "border-r" : "border-l"
+        }`}
+      >
+        <div className={` px-2 py-4 `}>{t("title")}</div>
+
+        <Link href={t("linkedin-link")}>
+          <span>
+            <LinkedInIcon width={20} />
+          </span>
+        </Link>
+
+        <Link href={t("instagram-link")}>
+          <span>
+            <InstagramIcon width={20} />
+          </span>
+        </Link>
+      </div>
+      <div className=" col-span-6"></div>
+      <div
+        className={`bg-transparent flex items-center gap-2 col-span-1 ${
           locale === "en" ? "md:pr-8" : "md:pl-8"
         } `}
       >

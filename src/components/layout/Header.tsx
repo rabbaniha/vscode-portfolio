@@ -18,16 +18,15 @@ const Header = () => {
   }, [cleanPathname]);
 
   return (
-    <section className=" w-full border-b  items-center justify-between bg-transparent hidden lg:flex">
-      <div className="flex items-center bg-transparent">
-        <div
-          className={`flex items-center justify-start w-64 py-4 ${
-            locale === "en" ? "pl-8 pr-16  border-r" : "pr-8 pl-16 border-l"
-          }`}
-        >
-          {t("name")}
-        </div>
-
+    <section className=" w-full border-b  bg-transparent hidden lg:grid lg:grid-cols-9">
+      <div
+        className={`col-span-2 flex items-center justify-start py-4 ${
+          locale === "en" ? "pl-8 pr-16  border-r" : "pr-8 pl-16 border-l"
+        }`}
+      >
+        {t("name")}
+      </div>
+      <div className="flex items-center bg-transparent col-span-6">
         <ul className=" flex items-center justify-center ">
           <Link href={"/"} className=" relative">
             <li
@@ -155,7 +154,7 @@ const Header = () => {
         </ul>
       </div>
       <div
-        className={`bg-transparent flex items-center gap-2 ${
+        className={`bg-transparent flex items-center justify-end gap-2 col-span-1 ${
           locale === "en" ? "pr-8" : "pl-8"
         }`}
       >
