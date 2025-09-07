@@ -26,7 +26,7 @@ const ScreenshotImageBlur = ({ link, title, className = "" }) => {
 
       <img
         src={screenshotUrl}
-        className={`w-full h-64 rounded-t-sm transition-all duration-700 ease-out ${
+        className={`w-full h-64  transition-all duration-700 ease-out ${
           imageState === "loaded"
             ? "opacity-100 scale-100 filter-none"
             : "opacity-0 scale-105 blur-sm"

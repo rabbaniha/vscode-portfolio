@@ -21,12 +21,14 @@ const ProjectCard = ({
   link,
   technologies = [],
   status = "active",
+  statusText,
 }: {
   title: string;
   description: string;
   link: string;
   technologies: string[];
-  status?: string;
+  status?: "active" | "in-active";
+  statusText: string;
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -34,8 +36,8 @@ const ProjectCard = ({
 
   // Truncate description for card display
   const truncatedDescription =
-    description.length > 100
-      ? description.substring(0, 100) + "..."
+    description.length > 50
+      ? description.substring(0, 50) + "..."
       : description;
 
   const shouldShowReadMore = description.length > 100;
@@ -49,9 +51,9 @@ const ProjectCard = ({
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
-      <Card className="group relative overflow-hidden bg-card/80 text-card-foreground backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+      <Card className="max-w-sm lg:min-w-[320px]  group relative overflow-hidden bg-card/80 text-card-foreground backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
         {/* Status Badge */}
-        {/* <div className="absolute top-4 right-4 z-20">
+        <div className="absolute top-4 right-4 z-20">
           <Badge
             variant={status === "active" ? "default" : "secondary"}
             className={`${
@@ -60,9 +62,9 @@ const ProjectCard = ({
                 : "bg-muted hover:bg-muted/80 text-muted-foreground"
             }  text-xs px-2 py-1`}
           >
-            {status === "active" ? "فعال" : "آرشیو"}
+            {statusText}
           </Badge>
-        </div> */}
+        </div>
 
         {/* Header with Title */}
         <div className="px-6 py-2">
@@ -80,7 +82,7 @@ const ProjectCard = ({
                 <Badge
                   key={index}
                   variant="outline"
-                  className="text-xs px-2 py-0.5 bg-blue-50 border-blue-200 text-blue-700"
+                  className="text-xs px-2 py-0.5 bg-popover border-border text-popover-foreground"
                 >
                   {tech}
                 </Badge>
@@ -88,7 +90,7 @@ const ProjectCard = ({
               {technologies.length > 3 && (
                 <Badge
                   variant="outline"
-                  className="text-xs px-2 py-0.5 bg-gray-50 border-gray-200 text-gray-600"
+                  className="text-xs px-2 py-0.5 bg-background border-border text-foreground"
                 >
                   +{technologies.length - 3}
                 </Badge>
@@ -108,7 +110,7 @@ const ProjectCard = ({
               <ScreenshotImageBlur
                 link={link}
                 title={title}
-                className="w-full h-48 rounded-none"
+                className="w-full h-40 rounded-none"
               />
 
               {/* Hover Overlay */}
@@ -119,19 +121,7 @@ const ProjectCard = ({
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     className="absolute inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center"
-                  >
-                    <div className="flex gap-2">
-                      <Button
-                        size="sm"
-                        variant="secondary"
-                        className="bg-white/90 hover:bg-white text-gray-800"
-                        onClick={() => window.open(link, "_blank")}
-                      >
-                        <Eye className="w-4 h-4 mr-1" />
-                        پیش‌نمایش
-                      </Button>
-                    </div>
-                  </motion.div>
+                  ></motion.div>
                 )}
               </AnimatePresence>
             </motion.div>
@@ -139,7 +129,7 @@ const ProjectCard = ({
 
           {/* Description Section */}
           <div className="p-6 pt-4">
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
+            <p className="text-card-foreground text-sm leading-relaxed mb-4">
               {truncatedDescription}
             </p>
 
@@ -152,15 +142,23 @@ const ProjectCard = ({
                       <Button
                         variant="outline"
                         size="sm"
-                        className="hover:bg-blue-50 hover:border-blue-300 hover:text-blue-700 transition-colors"
+                        className="cursor-pointer hover:bg-muted hover:border-border hover:text-muted-foreground transition-colors"
                       >
                         <Info className="w-4 h-4 mr-1" />
-                        بیشتر
+                        {locale === "en"
+                          ? "more"
+                          : locale === "fa"
+                          ? "بیشتر"
+                          : "أكثر"}
                       </Button>
                     </DialogTrigger>
-                    <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                    <DialogContent
+                      dir={locale === "en" ? "ltr" : "rtl"}
+                      className="max-w-2xl bg-card z-[99] border-border text-card-foreground max-h-[80vh] 
+                    overflow-y-auto scrollbar-hide"
+                    >
                       <DialogHeader>
-                        <DialogTitle className="text-2xl font-bold text-gray-800 mb-2">
+                        <DialogTitle className="text-2xl font-bold  mb-2">
                           {title}
                         </DialogTitle>
                       </DialogHeader>
@@ -176,7 +174,7 @@ const ProjectCard = ({
 
                         {/* Full Description */}
                         <div className="prose prose-sm max-w-none">
-                          <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
+                          <p className="text-card-foreground/90 leading-relaxed whitespace-pre-wrap">
                             {description}
                           </p>
                         </div>
@@ -184,14 +182,18 @@ const ProjectCard = ({
                         {/* Technologies in Dialog */}
                         {technologies.length > 0 && (
                           <div>
-                            <h4 className="font-semibold text-gray-800 mb-2">
-                              تکنولوژی‌های استفاده شده:
+                            <h4 className="font-semibold mb-2">
+                              {locale === "en"
+                                ? "Technologies used:"
+                                : locale === "fa"
+                                ? "تکنولوژی‌های استفاده شده:"
+                                : "التقنيات المستخدمة:"}
                             </h4>
                             <div className="flex flex-wrap gap-2">
                               {technologies.map((tech, index) => (
                                 <Badge
                                   key={index}
-                                  className="bg-blue-100 text-blue-800 hover:bg-blue-200"
+                                  className="bg-popover border-border text-popover-foreground hover:bg-muted"
                                 >
                                   {tech}
                                 </Badge>
@@ -204,10 +206,14 @@ const ProjectCard = ({
                         <div className="pt-4 border-t">
                           <Button
                             onClick={() => window.open(link, "_blank")}
-                            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+                            className="cursor-pointer w-full bg-gradient-to-r from-primary to-primary/70 hover:from-primary/60 hover:to-primary/90 text-primary-foreground hover:text-primary-foreground"
                           >
                             <ExternalLink className="w-4 h-4 mr-2" />
-                            مشاهده پروژه
+                            {locale === "en"
+                              ? "View project"
+                              : locale === "fa"
+                              ? "مشاهده پروژه"
+                              : "عرض المشروع"}
                             <ChevronRight className="w-4 h-4 mr-2" />
                           </Button>
                         </div>
@@ -220,10 +226,10 @@ const ProjectCard = ({
               <Button
                 size="sm"
                 onClick={() => window.open(link, "_blank")}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                className="cursor-pointer bg-gradient-to-r from-primary to-primary/90 hover:opacity-85 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <ExternalLink className="w-4 h-4 mr-1" />
-                مشاهده
+                {locale === "en" ? "View" : locale === "fa" ? "مشاهده" : "منظر"}
               </Button>
             </div>
           </div>

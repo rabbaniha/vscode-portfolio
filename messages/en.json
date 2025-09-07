@@ -127,13 +127,21 @@
       "title": "Mazraebaan",
       "description": "My journey in programming began in 2019. What started as a simple hobby turned into my professional passion. Today, with over 5 years of experience, I work in modern web development.",
       "link": "https://mazraebaan.com",
-      "technologies": "nodejs, expressjs, nextjs, tailwindcss, mongodb, shadcnui"
+      "technologies": "nodejs, expressjs, nextjs, tailwindcss, mongodb, shadcnui",
+      "status": {
+        "state": "active",
+        "text": "active"
+      }
     },
     "portfolio": {
       "title": "Portfolio",
       "description": "My journey in programming began in 2019. What started as a simple hobby turned into my professional passion. Today, with over 5 years of experience, I work in modern web development.",
       "link": "https://portfolio-seven-bay-88.vercel.app",
-      "technologies": "nextjs, typescript, tailwindcss, shadcnui"
+      "technologies": "nextjs, typescript, tailwindcss, shadcnui",
+      "status": {
+        "state": "active",
+        "text": "active"
+      }
     }
   },
   "portfolio": {
