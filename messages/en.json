@@ -223,7 +223,9 @@
       },
       "email": {
         "label": "Email",
-        "placeholder": "Enter your email address"
+        "placeholder": "Enter your email address",
+        "errorMsg": "Invalide email address"
+
       },
       "subject": {
         "label": "Subject",
