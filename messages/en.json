@@ -144,33 +144,6 @@
       }
     }
   },
-  "portfolio": {
-    "title": "Portfolio",
-    "description": "A collection of the best projects I’ve done",
-    "categories": {
-      "all": "All",
-      "web": "Websites",
-      "mobile": "Mobile",
-      "desktop": "Desktop",
-      "ui": "UI/UX Design"
-    },
-    "filters": {
-      "technology": "Technology",
-      "category": "Category",
-      "year": "Year"
-    },
-    "project": {
-      "overview": "Project Overview",
-      "technologies": "Technologies",
-      "features": "Features",
-      "challenges": "Challenges",
-      "liveDemo": "Live Demo",
-      "sourceCode": "Source Code",
-      "visitWebsite": "Visit Website",
-      "previousProject": "Previous Project",
-      "nextProject": "Next Project"
-    }
-  },
   "services": {
     "title": "My Services",
     "description": "High-quality services I provide with expertise",
@@ -215,27 +188,6 @@
           "Scalable Solutions"
         ]
       }
-    },
-    "process": {
-      "title": "My Process",
-      "steps": {
-        "consultation": {
-          "title": "Consultation",
-          "description": "Understanding needs and defining project goals"
-        },
-        "planning": {
-          "title": "Planning",
-          "description": "Designing architecture and creating timelines"
-        },
-        "development": {
-          "title": "Development",
-          "description": "High-quality implementation with continuous testing"
-        },
-        "delivery": {
-          "title": "Delivery",
-          "description": "Project handover and post-launch support"
-        }
-      }
     }
   },
   "resume": {
@@ -252,7 +204,13 @@
     }
   },
   "contact": {
-    "title": "Contact Me",
+    "title": "_contact-me",
+    "fine-me": {
+      "title": "fine-me-also-in",
+      "linkedin": "",
+      "instagram": "",
+      "github": ""
+    },
     "description": "Have a project or a question? Let’s connect",
     "form": {
       "name": {
