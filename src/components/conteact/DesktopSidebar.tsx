@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
+import { easeOut, motion } from "framer-motion";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -15,6 +16,21 @@ import { SquareArrowOutUpRight } from "lucide-react";
 const DesktopSidebar = () => {
   const locale = useLocale();
   const t = useTranslations("contact");
+
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        ease: easeOut,
+      },
+    },
+  };
   return (
     <div className={`col-span-2 ${locale === "en" ? "border-r" : "border-l"}`}>
       <div className="hidden lg:flex items-center gap-2  border-b px-2  py-4">
@@ -22,7 +38,12 @@ const DesktopSidebar = () => {
         <p className=" text-md">{t("title")}</p>
       </div>
       <div className=" flex flex-col gap-4 py-4 px-4">
-        <div className=" flex items-start gap-2">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={itemVariants}
+          className=" flex items-start gap-2"
+        >
           <EmailIcon />
           <div>
             <p className=" w-3/4 text-wrap whitespace-pre-line">
@@ -30,41 +51,54 @@ const DesktopSidebar = () => {
             </p>
             <p className=" ms-2">{t("email").substring(16)}</p>
           </div>
-        </div>
-        <span className=" flex items-center gap-2">
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={itemVariants}
+          className=" flex items-center gap-2"
+        >
           <PhoneIcon />
           <p>{t("phone")}</p>
-        </span>
+        </motion.div>
       </div>
       <div className="hidden lg:flex items-center gap-2  border-b border-t px-2  py-4">
         <ArrowDropDownIcon />
         <p className=" text-md">{t("find-me.title")}</p>
       </div>
       <div className="flex flex-col gap-4 py-4 px-4">
-        <Link href={""} className=" flex items-center gap-2">
-          <SquareArrowOutUpRight className=" text-muted-foreground size-4 me-2" />
+        <motion.div initial="hidden" animate="visible" variants={itemVariants}>
+          <Link href={""} className=" flex items-center gap-2">
+            <SquareArrowOutUpRight className=" text-muted-foreground size-4 me-2" />
 
-          <YouTubeIcon />
-          <p>{t("find-me.youtube")}</p>
-        </Link>
-        <Link href={""} className=" flex items-center gap-2">
-          <SquareArrowOutUpRight className=" text-muted-foreground size-4 me-2" />
+            <YouTubeIcon />
+            <p>{t("find-me.youtube")}</p>
+          </Link>
+        </motion.div>
+        <motion.div initial="hidden" animate="visible" variants={itemVariants}>
+          <Link href={""} className=" flex items-center gap-2">
+            <SquareArrowOutUpRight className=" text-muted-foreground size-4 me-2" />
 
-          <InstagramIcon />
-          <p>{t("find-me.instagram")}</p>
-        </Link>
-        <Link href={""} className=" flex items-center gap-2">
-          <SquareArrowOutUpRight className=" text-muted-foreground size-4 me-2" />
+            <InstagramIcon />
+            <p>{t("find-me.instagram")}</p>
+          </Link>
+        </motion.div>
+        <motion.div initial="hidden" animate="visible" variants={itemVariants}>
+          <Link href={""} className=" flex items-center gap-2">
+            <SquareArrowOutUpRight className=" text-muted-foreground size-4 me-2" />
 
-          <GitHubIcon />
-          <p>{t("find-me.github")}</p>
-        </Link>
-        <Link href={""} className=" flex items-center gap-2">
-          <SquareArrowOutUpRight className=" text-muted-foreground size-4 me-2" />
+            <GitHubIcon />
+            <p>{t("find-me.github")}</p>
+          </Link>
+        </motion.div>
+        <motion.div initial="hidden" animate="visible" variants={itemVariants}>
+          <Link href={""} className=" flex items-center gap-2">
+            <SquareArrowOutUpRight className=" text-muted-foreground size-4 me-2" />
 
-          <LinkedInIcon />
-          <p>{t("find-me.linkedin")}</p>
-        </Link>
+            <LinkedInIcon />
+            <p>{t("find-me.linkedin")}</p>
+          </Link>
+        </motion.div>
       </div>
     </div>
   );
