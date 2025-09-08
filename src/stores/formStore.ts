@@ -1,8 +1,9 @@
-import { create } from 'zustand';
+import { create } from "zustand";
 
 interface FormData {
   name: string;
   email: string;
+  subject: string;
   message: string;
   date: string;
 }
@@ -14,19 +15,20 @@ interface FormStore {
 }
 
 const initialFormData: FormData = {
-  name: '',
-  email: '',
-  message: '',
-  date: new Date().toLocaleDateString('en-GB', { 
-    weekday: 'short', 
-    day: '2-digit', 
-    month: 'short' 
-  })
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+  date: new Date().toLocaleDateString("en-GB", {
+    weekday: "short",
+    day: "2-digit",
+    month: "short",
+  }),
 };
 
 export const useFormStore = create<FormStore>((set) => ({
   formData: initialFormData,
-  
+
   updateFormData: (field, value) =>
     set((state) => ({
       formData: {
@@ -34,16 +36,16 @@ export const useFormStore = create<FormStore>((set) => ({
         [field]: value,
       },
     })),
-    
+
   resetFormData: () =>
     set({
       formData: {
         ...initialFormData,
-        date: new Date().toLocaleDateString('en-GB', { 
-          weekday: 'short', 
-          day: '2-digit', 
-          month: 'short' 
-        })
+        date: new Date().toLocaleDateString("en-GB", {
+          weekday: "short",
+          day: "2-digit",
+          month: "short",
+        }),
       },
     }),
 }));
