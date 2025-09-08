@@ -21,7 +21,7 @@ import { useFormStore } from "@/stores/formStore";
 
 const EmailForm = () => {
   const t = useTranslations("contact.form");
-  const p = useTranslations("common");
+  const p = useTranslations("contact");
 
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "loading" | "success" | "error"
@@ -100,6 +100,9 @@ const EmailForm = () => {
 
   return (
     <div className="lg:col-span-4 border-e p-4 lg:overflow-y-auto lg:max-h-[77vh] scrollbar-hide">
+      <h2 className=" font-semibold text-lg w-[90%] mx-auto mb-8">
+        {p("description")}
+      </h2>
       {submitStatus === "success" ? (
         <AnimatePresence>
           <motion.div
