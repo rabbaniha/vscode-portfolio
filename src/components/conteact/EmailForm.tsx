@@ -99,7 +99,7 @@ const EmailForm = () => {
   };
 
   return (
-    <div className="col-span-4 border-e p-4 overflow-y-auto max-h-[75vh] scrollbar-hide">
+    <div className="lg:col-span-4 border-e p-4 lg:overflow-y-auto lg:max-h-[77vh] scrollbar-hide">
       {submitStatus === "success" ? (
         <AnimatePresence>
           <motion.div
@@ -117,7 +117,7 @@ const EmailForm = () => {
                 .split(".")
                 .map((s, i) => (
                   <p
-                    className=" font-semibold text-xl text-card-foreground/70 mb-2"
+                    className=" font-semibold sm:text-xl text-lg text-card-foreground/70 mb-2"
                     key={i}
                   >
                     {s}
