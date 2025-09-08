@@ -64,13 +64,16 @@ const CustomNotFoundPage = () => {
   };
 
   return (
-    <div className="flex-1 flex items-center justify-center flex-col gap-8 px-4 py-8 max-h-[75vh] overflow-auto scrollbar-hide">
+    <div
+      className="flex-1 flex items-center justify-center flex-col lg:flex-row  lg:items-start gap-8 px-4 py-8 
+    max-h-[75vh] overflow-y-auto scrollbar-hide"
+    >
       {/* Animated Image */}
       <motion.div
         variants={imageVariants}
         initial="hidden"
         animate="visible"
-        className="relative"
+        className="relative lg:mt-10"
       >
         <Image
           src="/images/404.png"
@@ -132,13 +135,17 @@ const CustomNotFoundPage = () => {
             <span className=" text-popover-foreground/60">{"("}</span>
             <span className=" text-primary">route</span>
             <span className=" text-popover-foreground/60 mx-2">{"=>"}</span>
+            <span className=" text-popover-foreground/60">{"{"}</span>
+          </div>
+          <div className=" ml-12">
             <span className=" text-primary">route</span>
             <span className=" text-popover-foreground/60">.</span>
             <span className=" text-destructive">path</span>
             <span className=" text-popover-foreground/60 mx-2">{"==="}</span>
             <span className=" text-primary">url</span>
-            <span className=" text-popover-foreground/60">{");"}</span>
           </div>
+          <div className=" text-popover-foreground/60">{"});"}</div>
+
           <div className=" ml-4">
             <span className=" text-amber-500">if</span>
             <span className=" text-popover-foreground/60">{"("}</span>
