@@ -225,15 +225,22 @@
         "label": "Email",
         "placeholder": "Enter your email address",
         "errorMsg": "Invalide email address"
-
       },
       "subject": {
         "label": "Subject",
-        "placeholder": "Enter the subject"
+        "placeholder": "Enter the subject",
+        "errorMsg": "Subject is required"
       },
       "message": {
         "label": "Your Message",
-        "placeholder": "Write your message here..."
+        "placeholder": "Write your message here...",
+        "errorMsg": "Message must be at least 10 characters"
+      },
+      "error": "Error in sending email please try again later",
+      "success": {
+        "title": "Thank You! 🙌",
+        "message": "Your message has been accepted.You will receive answer soon!",
+        "action": "Send New Message"
       },
       "submit": "Send Message",
       "sending": "Sending..."
