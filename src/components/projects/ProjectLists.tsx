@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard";
 const ProjectLists = () => {
   const t = useTranslations("projects");
   return (
-    <div className="p-8 flex flex-col lg:flex-row gap-8 overflow-y-auto lg:overflow-y-hidden lg:overflow-x-auto scrollbar-hide max-h-[75vh] lg:h-full lg:w-full">
+    <div className="p-8 flex flex-col lg:flex-row gap-8 overflow-y-auto lg:overflow-y-hidden lg:overflow-x-auto scrollbar-hide lg:max-h-[75vh] max-h-[83vh] lg:h-full lg:w-full">
       <ProjectCard
         title={t("mazraebaan.title")}
         link={t("mazraebaan.link")}
