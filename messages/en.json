@@ -85,7 +85,7 @@
     "professional": {
       "title": "professional-info",
       "experienc": {
-        "title": "experienc",
+        "title": "experience",
         "description": "I have practical experience as a Full-Stack Web Developer, working with technologies such as Node.js, Express, React, Next.js, MongoDB, SQL, and Docker. My work includes designing and deploying end-to-end web applications, handling both frontend and backend development, and managing databases. I also have hands-on knowledge in server management and deployment automation, using tools like PM2, Jenkins, and CI/CD pipelines to ensure reliability and scalability. Beyond traditional web apps, I have worked on data-driven systems, including projects that apply satellite data for agricultural monitoring and irrigation management. These experiences have strengthened my ability to connect technical solutions with real-world challenges."
       },
       "skills": {
@@ -144,52 +144,6 @@
       }
     }
   },
-  "services": {
-    "title": "My Services",
-    "description": "High-quality services I provide with expertise",
-    "items": {
-      "webDevelopment": {
-        "title": "Web Development",
-        "description": "Design and develop modern, responsive websites",
-        "features": [
-          "Responsive Design",
-          "SEO Optimization",
-          "High Load Speed",
-          "Advanced Security"
-        ]
-      },
-      "mobileApp": {
-        "title": "Mobile App Development",
-        "description": "Build cross-platform mobile applications",
-        "features": [
-          "React Native",
-          "Native UI/UX",
-          "High Performance",
-          "Full Support"
-        ]
-      },
-      "uiux": {
-        "title": "UI/UX Design",
-        "description": "Design beautiful and functional user experiences",
-        "features": [
-          "User Research",
-          "Interactive Prototypes",
-          "Design Systems",
-          "Usability Testing"
-        ]
-      },
-      "consulting": {
-        "title": "Technical Consulting",
-        "description": "Consulting on choosing the best technologies",
-        "features": [
-          "Architecture Review",
-          "Performance Optimization",
-          "System Security",
-          "Scalable Solutions"
-        ]
-      }
-    }
-  },
   "resume": {
     "title": "My Resume",
     "description": "My work and educational experience",
@@ -214,7 +168,7 @@
       "github": "Github",
       "youtube": "YouTube"
     },
-    "description": "Have a project or a question? Let’s connect",
+    "description": "Have a project or a question? Let’s connect:",
     "form": {
       "name": {
         "label": "Your Name",
@@ -265,8 +219,7 @@
   },
   "notFound": {
     "title": "Page Not Found",
-    "description": "Sorry, the page you’re looking for doesn’t exist.",
-    "backToHome": "Back to Home"
+    "description": "Sorry, the page you’re looking for doesn’t exist."
   },
   "metadata": {
     "title": "Heydar Rabbaniha - Full Stack Developer",
