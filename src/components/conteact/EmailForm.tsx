@@ -100,7 +100,7 @@ const EmailForm = () => {
 
   return (
     <div className="lg:col-span-4 border-e p-4 lg:overflow-y-auto lg:max-h-[77vh] scrollbar-hide">
-      <h2 className=" font-semibold text-lg w-[90%] mx-auto mb-8">
+      <h2 className=" font-semibold text-md w-[90%] mx-auto mb-8">
         {p("description")}
       </h2>
       {submitStatus === "success" ? (
