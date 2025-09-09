@@ -6,7 +6,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ChevronRight, File, Folder, FolderOpen } from "lucide-react";
+import {
+  ChevronRight,
+  ChevronLeft,
+  File,
+  Folder,
+  FolderOpen,
+} from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { useContentTabStore } from "@/stores";
@@ -42,13 +48,18 @@ const PersonalTab = () => {
                   locale === "en" ? "pl-6" : "pr-6"
                 }`}
               >
-                {/* Chevron */}
-                <ChevronRight
-                  size={16}
-                  className="transition-transform duration-200 group-data-[state=open]:rotate-90"
-                />
+                {locale === "en" ? (
+                  <ChevronRight
+                    size={16}
+                    className="transition-transform duration-200 group-data-[state=open]:rotate-90"
+                  />
+                ) : (
+                  <ChevronLeft
+                    size={16}
+                    className="transition-transform duration-200 group-data-[state=open]:rotate-270"
+                  />
+                )}
 
-                {/* Folder icons */}
                 <Folder
                   size={18}
                   className="text-primary group-data-[state=open]:hidden"
@@ -79,11 +90,17 @@ const PersonalTab = () => {
                   locale === "en" ? "pl-6" : "pr-6"
                 }`}
               >
-                {/* Chevron */}
-                <ChevronRight
-                  size={16}
-                  className="transition-transform duration-200 group-data-[state=open]:rotate-90"
-                />
+                {locale === "en" ? (
+                  <ChevronRight
+                    size={16}
+                    className="transition-transform duration-200 group-data-[state=open]:rotate-90"
+                  />
+                ) : (
+                  <ChevronLeft
+                    size={16}
+                    className="transition-transform duration-200 group-data-[state=open]:rotate-270"
+                  />
+                )}
 
                 {/* Folder icons */}
                 <Folder
@@ -117,11 +134,17 @@ const PersonalTab = () => {
                   locale === "en" ? "pl-6" : "pr-6"
                 }`}
               >
-                {/* Chevron */}
-                <ChevronRight
-                  size={16}
-                  className="transition-transform duration-200 group-data-[state=open]:rotate-90"
-                />
+                {locale === "en" ? (
+                  <ChevronRight
+                    size={16}
+                    className="transition-transform duration-200 group-data-[state=open]:rotate-90"
+                  />
+                ) : (
+                  <ChevronLeft
+                    size={16}
+                    className="transition-transform duration-200 group-data-[state=open]:rotate-270"
+                  />
+                )}
 
                 {/* Folder icons */}
                 <Folder
