@@ -1,7 +1,7 @@
 "use client";
 import SnakeGame from "@/components/home/SnakeGame";
 import { Link } from "@/i18n/navigation";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { easeInOut, easeOut, motion } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -86,10 +86,10 @@ const chevronVariants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: {
-      duration: 0.5,
-      delay: 2.5,
-    },
+  },
+  transition: {
+    duration: 0.5,
+    delay: 3,
   },
   hover: {
     x: 5,
@@ -187,11 +187,14 @@ export default function HomePage() {
           {/* عنوان با انیمیشن chevron */}
           <motion.p
             className="text-lg lg:text-xl text-primary flex items-center gap-2 cursor-pointer"
-            variants={itemVariants}
             whileHover="hover"
           >
             <motion.span variants={chevronVariants}>
-              <ChevronRight className="transition-transform" />
+              {locale === "en" ? (
+                <ChevronRight className="transition-transform" />
+              ) : (
+                <ChevronLeft className="transition-transform" />
+              )}
             </motion.span>
             <motion.span
               initial={{ opacity: 0 }}
@@ -212,10 +215,13 @@ export default function HomePage() {
               transition: { duration: 0.2 },
             }}
           >
-            //{t("cta.title")}
+            {locale === "en" ? "//" : "\\\\"} {t("cta.title")}
           </motion.p>
 
-          <div className="flex md:items-center flex-col md:flex-row gap-2 md:gap-4">
+          <div
+            dir="ltr"
+            className="flex md:items-center flex-col md:flex-row gap-2 md:gap-4"
+          >
             <motion.span
               className="text-primary"
               whileHover={{
@@ -223,7 +229,7 @@ export default function HomePage() {
                 transition: { duration: 0.2 },
               }}
             >
-              <span className=" text-primary me-2">const</span>
+              <span className={`text-primary mr-2`}>const</span>
               <span className=" text-amber-500">githubLink</span>
               <span className=" text-popover-foreground mx-2">=</span>
             </motion.span>
