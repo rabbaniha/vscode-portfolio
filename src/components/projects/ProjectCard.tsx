@@ -3,7 +3,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ScreenshotImageBlur from "../ui/ScreenShotWithProgress";
 import { Button } from "../ui/button";
-import { ChevronRight, ExternalLink, Eye, Info } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink, Eye, Info } from "lucide-react";
 import { Card, CardContent } from "../ui/card";
 import { Badge } from "../ui/badge";
 import {
@@ -53,7 +53,11 @@ const ProjectCard = ({
     >
       <Card className="max-w-sm lg:min-w-[320px]  group relative overflow-hidden bg-card/80 text-card-foreground backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
         {/* Status Badge */}
-        <div className="absolute top-4 right-4 z-20">
+        <div
+          className={`absolute top-4 z-20 ${
+            locale === "en" ? "right-4" : "left-4"
+          }`}
+        >
           <Badge
             variant={status === "active" ? "default" : "secondary"}
             className={`${
@@ -214,7 +218,11 @@ const ProjectCard = ({
                               : locale === "fa"
                               ? "مشاهده پروژه"
                               : "عرض المشروع"}
-                            <ChevronRight className="w-4 h-4 mr-2" />
+                            {locale === "en" ? (
+                              <ChevronRight className="w-4 h-4 mr-2" />
+                            ) : (
+                              <ChevronLeft className="w-4 h-4 ml-2" />
+                            )}
                           </Button>
                         </div>
                       </div>
