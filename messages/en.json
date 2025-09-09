@@ -198,5 +198,45 @@
     "instagram-link": "",
     "github": "",
     "github-link": ""
+  },
+  "games": {
+    "snake-game": {
+      "score-board": {
+        "score": "Score",
+        "length": "Length",
+        "level": "Level",
+        "best": "Best"
+      },
+      "game-state": {
+        "victory": {
+          "title": "🏆 Ultimate Victory! 🏆",
+          "description": "You have completed all levels!"
+        },
+        "next-level": {
+          "title": "🎉 Level Completed! 🎉",
+          "description": "Get ready for the next challenge!"
+        },
+        "game-over": {
+          "title": "Game Over! 💀"
+        },
+        "game-paused": {
+          "title": "Paused ⏸️",
+          "description": "Press Space to continue."
+        }
+      },
+      "game-control": {
+        "start": "Start Game",
+        "next": "Next Level",
+        "pause": "Pause",
+        "restart": "Restart",
+        "continue": "Continue",
+        "new-game": "New Game",
+        "return": "Return"
+      },
+      "guid": {
+        "line1": "Arrow keys or WASD • Space: Pause • Escape: Exit",
+        "line2": "Each level is harder and worth more points!"
+      }
+    }
   }
 }
