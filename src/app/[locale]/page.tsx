@@ -206,7 +206,7 @@ export default function HomePage() {
         {/* بخش CTA */}
         <motion.div className="space-y-3" variants={ctaVariants}>
           <motion.p
-            className="text-foreground/50 text-sm md:text-lg"
+            className="text-foreground/80 text-sm md:text-lg"
             whileHover={{
               color: "rgb(var(--foreground))",
               transition: { duration: 0.2 },
@@ -223,16 +223,18 @@ export default function HomePage() {
                 transition: { duration: 0.2 },
               }}
             >
-              {t("cta.sub-title")}
+              <span className=" text-primary me-2">const</span>
+              <span className=" text-amber-500">githubLink</span>
+              <span className=" text-popover-foreground mx-2">=</span>
             </motion.span>
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 target="/blank"
-                className="underline text-accent hover:text-accent/80 transition-colors duration-200 relative group"
+                className="underline text-pretty  transition-colors duration-200 relative group"
                 href={"https://github.com/rabbaniha"}
               >
-                {t("cta.link")}
+                https://github.com/rabbaniha
                 <motion.span
                   className={`absolute -bottom-1  w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300 ${
                     locale === "en" ? "left-0" : "right-0"

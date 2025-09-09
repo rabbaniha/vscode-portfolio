@@ -39,9 +39,7 @@
       "subtitle": "Specialized in React, Node.js, and devops",
       "description": "With over 3 years of experience in web development, I create modern and efficient projects",
       "cta": {
-        "title": "find my profile in Github:",
-        "sub-title": "const gitHubLink = ",
-        "link": "https://github.com/rabbaniha"
+        "title": "find my profile in Github:"
       }
     },
     "about": {
