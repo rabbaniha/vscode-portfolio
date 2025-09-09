@@ -32,9 +32,12 @@ const ContactData = () => {
       >
         <EmailIcon />
         <div>
-          <p className=" w-3/4 text-wrap whitespace-pre-line">
+          <a
+            href="mailto:heydarrabbanuha@gmail.com"
+            className=" w-3/4 text-wrap whitespace-pre-line"
+          >
             {t("email").substring(0, 16)}
-          </p>
+          </a>
           <p className=" ms-2">{t("email").substring(16)}</p>
         </div>
       </motion.div>
@@ -45,7 +48,7 @@ const ContactData = () => {
         className=" flex items-center gap-2"
       >
         <PhoneIcon />
-        <p>{t("phone")}</p>
+        <a href="tel:+989196163235" dir="ltr">{t("phone")}</a>
       </motion.div>
     </div>
   );
