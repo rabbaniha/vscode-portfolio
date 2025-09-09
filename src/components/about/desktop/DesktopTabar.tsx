@@ -6,7 +6,7 @@ import CloseIcon from "@mui/icons-material/Close";
 
 const DesktopTabbar = () => {
   const locale = useLocale();
-  const t = useTranslations();
+  const t = useTranslations("about.tabs");
   const { openTabs, activeContentTab, setActiveContentTab, closeTab } =
     useContentTabStore();
 
@@ -25,7 +25,7 @@ const DesktopTabbar = () => {
                 className="cursor-pointer text-sm"
                 onClick={() => setActiveContentTab(tab)}
               >
-                {tab}
+                {t(`${tab}`)}
               </span>
               <button
                 onClick={() => closeTab(tab)}

@@ -41,27 +41,6 @@
       "cta": {
         "title": "find my profile in Github:"
       }
-    },
-    "about": {
-      "title": "About Me",
-      "subtitle": "A bit about my story and experience",
-      "description": "I'm a developer passionate about creating beautiful and functional digital experiences",
-      "skills": "Skills",
-      "experience": "Years of Experience"
-    },
-    "services": {
-      "title": "My Services",
-      "subtitle": "What I can do for you"
-    },
-    "portfolio": {
-      "title": "Portfolio",
-      "subtitle": "Projects I’ve built with passion",
-      "viewAll": "View All"
-    },
-    "contact": {
-      "title": "Let's Talk",
-      "subtitle": "Got a new project? Let’s get started",
-      "getInTouch": "Get in Touch"
     }
   },
   "about": {
@@ -98,26 +77,13 @@
         "description": "Outside of my professional work, I enjoy activities that keep me creative and balanced. I like reading books and articles on technology, innovation, and personal growth, as well as exploring new trends in AI and software development. In my free time, I enjoy watching movies and series, as well as educational videos and content creation, which connect with my passion for learning and sharing knowledge. Beyond technology, I find relaxation in listening to music, walking in nature, and exploring new places, which help me recharge and stay motivated. I also like experimenting with side programming projects, where I can combine learning with creativity and later apply new ideas to real-world applications."
       }
     },
-
-    "title": "About Me",
-    "description": "Learn more about who I am and how I got here",
-    "story": {
-      "title": "My Story",
-      "content": "My journey in programming began in 2019. What started as a simple hobby turned into my professional passion. Today, with over 5 years of experience, I work in modern web development."
-    },
-    "skills": {
-      "title": "Technical Skills",
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "tools": "Tools"
-    },
-    "experience": {
-      "title": "Work Experience",
-      "education": "Education"
-    },
-    "interests": {
-      "title": "Personal Interests",
-      "content": "When I'm not at the computer, I enjoy reading, hiking in nature, and learning new technologies."
+    "tabs": {
+      "bio": "bio",
+      "interests": "interests",
+      "education": "education",
+      "experienc": "experience",
+      "skills": "skills",
+      "hobbies": "hobbies"
     }
   },
   "projects": {
