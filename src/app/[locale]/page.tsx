@@ -135,12 +135,13 @@ export default function HomePage() {
 
   return (
     <motion.div
-      className="w-[90%] max-w-5xl mx-auto h-full flex items-center justify-between"
+      className="w-[90%]  mx-auto h-full flex flex-col lg:flex-row  items-center py-32 lg:py-0 gap-16 
+      lg:gap-0  overflow-y-auto scrollbar-hide"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
-      <div className="space-y-16">
+      <div className="space-y-16 lg:w-1/2">
         {/* بخش اصلی */}
         <div className="space-y-3">
           {/* Greeting با انیمیشن fade up */}
@@ -255,33 +256,11 @@ export default function HomePage() {
 
       {/* Snake Game با انیمیشن */}
       <motion.div
-        className="hidden lg:block"
+        className="  lg:w-1/2 "
         variants={snakeGameVariants}
         whileHover="hover"
       >
-        <motion.div
-          className="relative"
-          whileHover={{
-            boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-            transition: { duration: 0.3 },
-          }}
-        >
-          <SnakeGame />
-
-          {/* افکت glow */}
-          <motion.div
-            className="absolute -inset-4 bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg blur-xl z-50"
-            animate={{
-              opacity: [0.3, 0.6, 0.3],
-              scale: [1, 1.05, 1],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: easeInOut,
-            }}
-          />
-        </motion.div>
+        <SnakeGame />
       </motion.div>
     </motion.div>
   );
