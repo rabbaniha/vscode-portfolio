@@ -33,11 +33,11 @@ button.addEventListener('click', () => {
   };
 
   return (
-    <div className="col-span-3 p-4">
+    <div dir="ltr" className="col-span-3 p-4">
       <div className="bg-popover rounded-lg overflow-hidden shadow-xl relative">
         {/* Header */}
         <div className="bg-secondary px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center gap-2">
             <div className="w-3 h-3 bg-red-500 rounded-full"></div>
             <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
             <div className="w-3 h-3 bg-green-500 rounded-full"></div>
