@@ -12,23 +12,21 @@ import {
 import { Button } from "../ui/button";
 
 export default function LocaleSwitcher() {
-  const t = useTranslations("LocaleSwitcher"); // برای ترجمه‌های مربوط به سوئیچر
-  const locale = useLocale(); // دریافت زبان فعلی
+  const t = useTranslations("LocaleSwitcher");
+  const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
 
   const locales = [
-    { code: "en", name: t("en") }, // نام زبان‌ها از فایل‌های ترجمه
+    { code: "en", name: t("en") },
     { code: "fa", name: t("fa") },
     { code: "ar", name: t("ar") },
   ];
 
   const changeLocale = (newLocale: string) => {
-    // حذف زبان فعلی از pathname
     const cleanPathname = pathname.replace(/^\/(en|fa|ar)/, "");
     startTransition(() => {
-      // اضافه کردن زبان جدید به مسیر
       router.replace(`/${newLocale}${cleanPathname}`);
     });
   };
@@ -37,7 +35,7 @@ export default function LocaleSwitcher() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm">
-          {locale}
+          {locale === "fa" ? "فا" : locale === "en" ? "en" : "العر"}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
