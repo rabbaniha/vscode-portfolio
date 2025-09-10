@@ -109,8 +109,46 @@ export default function SnakeGame() {
       }
     };
 
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    const handleTouchStart = (e: TouchEvent) => {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (e: TouchEvent) => {
+      if (gameState !== "playing") return;
+
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      const dy = e.changedTouches[0].clientY - touchStartY;
+
+      if (Math.abs(dx) > Math.abs(dy)) {
+        // حرکت افقی
+        if (dx > 0 && dir.x !== -1) {
+          setNextDir({ x: 1, y: 0 }); // راست
+        } else if (dx < 0 && dir.x !== 1) {
+          setNextDir({ x: -1, y: 0 }); // چپ
+        }
+      } else {
+        // حرکت عمودی
+        if (dy > 0 && dir.y !== -1) {
+          setNextDir({ x: 0, y: 1 }); // پایین
+        } else if (dy < 0 && dir.y !== 1) {
+          setNextDir({ x: 0, y: -1 }); // بالا
+        }
+      }
+    };
+
     window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchend", handleTouchEnd);
+
+    return () => {
+      window.removeEventListener("keydown", handleKey);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchend", handleTouchEnd);
+    };
   }, [gameState, dir, togglePause]);
 
   // Game loop
