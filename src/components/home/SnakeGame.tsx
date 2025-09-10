@@ -315,7 +315,7 @@ export default function SnakeGame() {
   return (
     <div className="w-full max-w-lg mx-auto">
       {/* Unified Game Container */}
-      <div className="bg-card backdrop-blur-sm rounded-sm p-6   ">
+      <div className="bg-card backdrop-blur-sm rounded-sm p-3 md:p-6 flex flex-col items-center   ">
         {/* Mobile Score Display */}
         <div className="block md:hidden mb-4" style={{ width: BOARD_WIDTH }}>
           <div className="flex justify-between items-center text-sm bg-muted rounded-sm px-3 py-2">
@@ -513,7 +513,7 @@ export default function SnakeGame() {
         </div>
 
         {/* Controls */}
-        <div className="flex gap-2 mt-4">
+        <div className="flex gap-2 mt-4" style={{ width: BOARD_WIDTH }}>
           {gameState === "idle" && (
             <motion.button
               whileHover={{ scale: 1.02 }}

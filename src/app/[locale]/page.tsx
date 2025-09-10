@@ -135,8 +135,8 @@ export default function HomePage() {
 
   return (
     <motion.div
-      className="w-[90%]  mx-auto h-full flex flex-col lg:flex-row  items-center py-32 lg:py-0 gap-16 
-      lg:gap-0  overflow-y-auto scrollbar-hide"
+      className="w-[98%] lg:w-[90%]  mx-auto h-full flex flex-col lg:flex-row  items-center py-32 lg:py-0 gap-16 
+      lg:gap-0  overflow-y-auto scrollbar-hide overflow-x-hidden"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

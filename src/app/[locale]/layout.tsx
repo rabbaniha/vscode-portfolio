@@ -31,7 +31,7 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider>
           <ThemeProvider>
-            <main className="w-screen h-screen flex items-center justify-center bg-muted p-4 lg:p-0 overflow-hidden">
+            <main className="w-screen h-screen flex items-center justify-center bg-muted p-2 md:p-4 lg:p-0 overflow-hidden">
               <section
                 className="w-full max-w-7xl h-full md:h-[95%] mx-auto 
                bg-gradient-to-r from-background to-background/80 text-foreground
