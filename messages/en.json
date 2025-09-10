@@ -233,6 +233,13 @@
         "new-game": "New Game",
         "return": "Return"
       },
+      "game-level": {
+        "easy": "Easy",
+        "medium": "Medium",
+        "hard": "Hard",
+        "very-hard": "Very Hard",
+        "impossible": "Impossible"
+      },
       "guid": {
         "line1": "Arrow keys or WASD • Space: Pause • Escape: Exit",
         "line2": "Each level is harder and worth more points!"

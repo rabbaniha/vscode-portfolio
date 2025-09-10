@@ -14,11 +14,11 @@ type GameState =
 
 // Level configurations
 const LEVELS = [
-  { gridWidth: 25, gridHeight: 20, cellSize: 12, speed: 200, name: "آسان" },
-  { gridWidth: 30, gridHeight: 24, cellSize: 10, speed: 150, name: "متوسط" },
-  { gridWidth: 35, gridHeight: 28, cellSize: 8, speed: 120, name: "سخت" },
-  { gridWidth: 40, gridHeight: 32, cellSize: 7, speed: 100, name: "بسیار سخت" },
-  { gridWidth: 45, gridHeight: 36, cellSize: 6, speed: 80, name: "غیرممکن" },
+  { gridWidth: 25, gridHeight: 20, cellSize: 12, speed: 200, name: "easy" },
+  { gridWidth: 30, gridHeight: 24, cellSize: 10, speed: 150, name: "medium" },
+  { gridWidth: 35, gridHeight: 28, cellSize: 8, speed: 120, name: "hard" },
+  { gridWidth: 40, gridHeight: 32, cellSize: 7, speed: 100, name: "very-hard" },
+  { gridWidth: 45, gridHeight: 36, cellSize: 6, speed: 80, name: "impossible" },
 ];
 
 export default function SnakeGame() {
@@ -476,7 +476,8 @@ export default function SnakeGame() {
                               {t("game-state.game-over.title")}
                             </h2>
                             <p className="text-muted-foreground text-sm">
-                              {t("score-board.level")}: {currentLevel.name}
+                              {t("score-board.level")}:{" "}
+                              {t(`game-level.${currentLevel.name}`)}
                             </p>
                           </>
                         )}
@@ -527,7 +528,7 @@ export default function SnakeGame() {
                   {t("score-board.level")}
                 </div>
                 <div className="text-sm font-medium text-accent-foreground">
-                  {currentLevel.name}
+                  {t(`game-level.${currentLevel.name}`)}
                 </div>
               </div>
               <div className="text-center">
